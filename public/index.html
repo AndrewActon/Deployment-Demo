@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Can't import a CSS file like normal. Heroku is not smart enough to go from HTML to CSS and back to HTML.
         Created a 'Virtual path prefix' to solve the problem. See server.js for CSS import.-->
-  <link rel="stylesheet" href="/styles">
+  <!-- <link rel="stylesheet" href="/styles"> -->
+  
+  <!-- How to import CSS when using express.static middleware, 
+  as long as the CSS and HTML file exists in the same public folder being served -->
+  <link rel="stylesheet" href="/index.css">
   <title>Heroku Test</title>
 </head>
 <body>
