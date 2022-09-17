@@ -8,7 +8,12 @@ app.use(express.json())
 
 
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '../index.html'))
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
+
+//Importing CSS file for front end. Must be exact same string from index.html link href.
+app.get('/styles', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.css'))
 })
 
 // Heroku makes the env. This line uses the env port OR a default 4005.
